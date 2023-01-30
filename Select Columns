@@ -1,0 +1,16 @@
+Table = UNION(
+			SELECTCOLUMNS(
+				('Future Margin Predictions'),
+					"Month",'Future Margin Predictions'[Month],
+					"Entity",'Future Margin Predictions'[Entity],
+					"Margin Earned",BLANK(),
+					"Prediction",'Future Margin Predictions'[Prediction]
+				),
+			SELECTCOLUMNS(
+				('Margin Earned'),
+				"Month",'Margin Earned'[Month],
+				"Entity",'Margin Earned'[Entity],
+				"Margin Earned",'Margin Earned'[Margin Earned],
+				"Prediction",BLANK()
+				)
+			)
